@@ -5,122 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="shortcut icon" type="image/x-icon" href="./media/icon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Alex+Brush&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Chess</title>
 </head>
+
 <body>
+    <nav>
+        <div><img id="logo" src="./media/icon.png"></div>
+        <div><h1 id="pseudo">ChessMania</h1></div>  
+        <div><input type="text" value="look up here..."><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+        </svg></div>
+        <div id="nav-icons">
+            <ul>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                        <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
+                        <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/>
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
+                        <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                    </svg>
+                </li>
+            </ul>
+    </nav>
+
     <main>
-        <div id="board">
-            <div class="alt-0">
-                <div class="square">8</div>
-                <div class="square">7</div>
-                <div class="square">6</div>
-                <div class="square">5</div>
-                <div class="square">4</div>
-                <div class="square">3</div>
-                <div class="square">2</div>
-                <div class="square">1</div>
+        <section class="game-options">
+            <p>Choose your favorite board colors :</p>
+            <div class="radiocheck">
+                <div class="rc"><input id="deafult" type="radio" name="board-cells" value="deafult-layout">Deafult</div>
+                <div class="rc"><input id="wood" type="radio" name="board-cells" value="wood">Wood</div>
+                <div class="rc"><input id="marble" type="radio" name="board-cells" value="marble">Marble</div>
             </div>
-
-            <div class="alt-1">
-                <div class="square white" id="a8"></div>
-                <div class="square black" id="a7"></div>
-                <div class="square white" id="a6"></div>
-                <div class="square black" id="a5"></div>
-                <div class="square white" id="a4"></div>
-                <div class="square black" id="a3"></div>
-                <div class="square white" id="a2"></div>
-                <div class="square black" id="a1"></div>
-                <div class="square">A</div>
+            <span></span>
+            <p>Choose your color :</p>
+            <div class="radiocheck">
+                <div class="rc"><input type="radio" name="team" value="light">Light</div>
+                <div class="rc"><input type="radio" name="team" value="dark">Dark</div>
             </div>
+        </section>
+        <section class="board-container">
+            <div id="board">
+                <div class="alt-0">
+                    <div class="square">8</div>
+                    <div class="square">7</div>
+                    <div class="square">6</div>
+                    <div class="square">5</div>
+                    <div class="square">4</div>
+                    <div class="square">3</div>
+                    <div class="square">2</div>
+                    <div class="square">1</div>
+                </div>
 
-            <div class="alt-0">
-                <div class="square black" id="b8"></div>
-                <div class="square white" id="b7"></div>
-                <div class="square black" id="b6"></div>
-                <div class="square white" id="b5"></div>
-                <div class="square black" id="b4"></div>
-                <div class="square white" id="b3"></div>
-                <div class="square black" id="b2"></div>
-                <div class="square white" id="b1"></div>
-                <div class="square">B</div>
+                <div class="alt-1">
+                    <div class="square light" id="a8"></div>
+                    <div class="square dark" id="a7"></div>
+                    <div class="square light" id="a6"></div>
+                    <div class="square dark" id="a5"></div>
+                    <div class="square light" id="a4"></div>
+                    <div class="square dark" id="a3"></div>
+                    <div class="square light" id="a2"></div>
+                    <div class="square dark" id="a1"></div>
+                    <div class="square">A</div>
+                </div>
+
+                <div class="alt-0">
+                    <div class="square dark" id="b8"></div>
+                    <div class="square light" id="b7"></div>
+                    <div class="square dark" id="b6"></div>
+                    <div class="square light" id="b5"></div>
+                    <div class="square dark" id="b4"></div>
+                    <div class="square light" id="b3"></div>
+                    <div class="square dark" id="b2"></div>
+                    <div class="square light" id="b1"></div>
+                    <div class="square">B</div>
+                </div>
+
+                <div class="alt-1">
+                    <div class="square light" id="c8"></div>
+                    <div class="square dark" id="c7"></div>
+                    <div class="square light" id="c6"></div>
+                    <div class="square dark" id="c5"></div>
+                    <div class="square light" id="c4"></div>
+                    <div class="square dark" id="c3"></div>
+                    <div class="square light" id="c2"></div>
+                    <div class="square dark" id="c1"></div>
+                    <div class="square">C</div>
+                </div>
+
+                <div class="alt-0">
+                    <div class="square dark" id="d8"></div>
+                    <div class="square light" id="d7"></div>
+                    <div class="square dark" id="d6"></div>
+                    <div class="square light" id="d5"></div>
+                    <div class="square dark" id="d4"></div>
+                    <div class="square light" id="d3"></div>
+                    <div class="square dark" id="d2"></div>
+                    <div class="square light" id="d1"></div>
+                    <div class="square">D</div>
+                </div>
+
+                <div class="alt-1">
+                    <div class="square light" id="e8"></div>
+                    <div class="square dark" id="e7"></div>
+                    <div class="square light" id="e6"></div>
+                    <div class="square dark" id="e5"></div>
+                    <div class="square light" id="e4"></div>
+                    <div class="square dark" id="e3"></div>
+                    <div class="square light" id="e2"></div>
+                    <div class="square dark" id="e1"></div>
+                    <div class="square">E</div>
+                </div>
+
+                <div class="alt-0">
+                    <div class="square dark" id="f8"></div>
+                    <div class="square light" id="f7"></div>
+                    <div class="square dark" id="f6"></div>
+                    <div class="square light" id="f5"></div>
+                    <div class="square dark" id="f4"></div>
+                    <div class="square light" id="f3"></div>
+                    <div class="square dark" id="f2"></div>
+                    <div class="square light" id="f1"></div>
+                    <div class="square">F</div>
+                </div>
+
+                <div class="alt-1">
+                    <div class="square light" id="g8"></div>
+                    <div class="square dark" id="g7"></div>
+                    <div class="square light" id="g6"></div>
+                    <div class="square dark" id="g5"></div>
+                    <div class="square light" id="g4"></div>
+                    <div class="square dark" id="g3"></div>
+                    <div class="square light" id="g2"></div>
+                    <div class="square dark" id="g1"></div>
+                    <div class="square">G</div>
+                </div>
+
+                <div class="alt-0">
+                    <div class="square dark" id="h8"></div>
+                    <div class="square light" id="h7"></div>
+                    <div class="square dark" id="h6"></div>
+                    <div class="square light" id="h5"></div>
+                    <div class="square dark" id="h4"></div>
+                    <div class="square light" id="h3"></div>
+                    <div class="square dark" id="h2"></div>
+                    <div class="square light" id="h1"></div>
+                    <div class="square">H</div>
+                </div>
             </div>
+        </section>
+    </main>    
 
-            <div class="alt-1">
-                <div class="square white" id="c8"></div>
-                <div class="square black" id="c7"></div>
-                <div class="square white" id="c6"></div>
-                <div class="square black" id="c5"></div>
-                <div class="square white" id="c4"></div>
-                <div class="square black" id="c3"></div>
-                <div class="square white" id="c2"></div>
-                <div class="square black" id="c1"></div>
-                <div class="square">C</div>
-            </div>
+    <!-- <img src="./media/dark/black-king.svg" alt="fix this error!"> -->
+    <footer>
 
-            <div class="alt-0">
-                <div class="square black" id="d8"></div>
-                <div class="square white" id="d7"></div>
-                <div class="square black" id="d6"></div>
-                <div class="square white" id="d5"></div>
-                <div class="square black" id="d4"></div>
-                <div class="square white" id="d3"></div>
-                <div class="square black" id="d2"></div>
-                <div class="square white" id="d1"></div>
-                <div class="square">D</div>
-            </div>
-
-            <div class="alt-1">
-                <div class="square white" id="e8"></div>
-                <div class="square black" id="e7"></div>
-                <div class="square white" id="e6"></div>
-                <div class="square black" id="e5"></div>
-                <div class="square white" id="e4"></div>
-                <div class="square black" id="e3"></div>
-                <div class="square white" id="e2"></div>
-                <div class="square black" id="e1"></div>
-                <div class="square">E</div>
-            </div>
-
-            <div class="alt-0">
-                <div class="square black" id="f8"></div>
-                <div class="square white" id="f7"></div>
-                <div class="square black" id="f6"></div>
-                <div class="square white" id="f5"></div>
-                <div class="square black" id="f4"></div>
-                <div class="square white" id="f3"></div>
-                <div class="square black" id="f2"></div>
-                <div class="square white" id="f1"></div>
-                <div class="square">F</div>
-            </div>
-
-            <div class="alt-1">
-                <div class="square white" id="g8"></div>
-                <div class="square black" id="g7"></div>
-                <div class="square white" id="g6"></div>
-                <div class="square black" id="g5"></div>
-                <div class="square white" id="g4"></div>
-                <div class="square black" id="g3"></div>
-                <div class="square white" id="g2"></div>
-                <div class="square black" id="g1"></div>
-                <div class="square">G</div>
-            </div>
-
-            <div class="alt-0">
-                <div class="square black" id="h8"></div>
-                <div class="square white" id="h7"></div>
-                <div class="square black" id="h6"></div>
-                <div class="square white" id="h5"></div>
-                <div class="square black" id="h4"></div>
-                <div class="square white" id="h3"></div>
-                <div class="square black" id="h2"></div>
-                <div class="square white" id="h1"></div>
-                <div class="square">H</div>
-            </div>
-        </div>
-    </main>
-
-    <!-- <img src="./media/black/black-king.svg" alt="fix this error!"> -->
-    
+    </footer>
     <script src="./script.js"></script>
 </body>
 </html>

@@ -1,11 +1,74 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+}
+/* <nav> settings */
+nav {
+    /* width: 100%; */
+    margin: 20px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav li {
+    list-style: none;
+}
+
+#logo {
+    width: 150px;
+    height: 150px;
+}
+
+#pseudo {
+    font-size: 65px ;
+    font-family: "UnifrakturMaguntia";
+    font-weight: 400;
+    font-style: italic;
+}
+
+#nav-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+body {
+    margin: 0;
+}
+
+/* <main> settings */
+main {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: burlywood;
+    
+    background-color: aquamarine;
+    /* background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.-WdQ5-RMOhJA718X7HEDEAHaEK%26pid%3DApi&f=1&ipt=9fa86b90cca75cc038891c35b9f7142c2ebfe63c564f9fd844b905c8f41dc49b&ipo=images); */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Make the background fixed (pinned) */
+    background-position: center; /* Center the background image */
+    background-size: 1550px 710px;	/*Ensure the image covers the entire background | width  height */
+    /* opacity: 0.2; */
 }
+.game-options {
+    margin: 30px 0;
+}
+
+.radiocheck {
+    margin: 10px 0;
+    display: flex;
+}
+
+.rc {
+    padding-left: 30px;
+}
+
+span { margin: 10px;}
+/* .board-container {
+    opacity: 1;
+} */
 
 #board {
     display: grid;
@@ -22,10 +85,12 @@ body {
     align-items: center;
 }
 
-.white {
-    background-color: white;
+.light {
+    background-color: white;    /* this is the deafult cell's color */
+
 }
 
-.black {
-    background-color: black;
+.dark {
+    background-color: black;    /* this is the deafult cell's color */
+
 }
