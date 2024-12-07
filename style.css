@@ -1,18 +1,25 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
-}
+} */
 /* <nav> settings */
-nav {
+header {
     /* width: 100%; */
     margin: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-nav li {
-    list-style: none;
+header li { list-style: none; }
+header svg {
+    width: 35px;
+    height: 35px;
 }
+header a {
+    color: black;
+    text-decoration: none;
+}
+a:hover { color: blue; }
 
 #logo {
     width: 150px;
@@ -20,15 +27,34 @@ nav li {
 }
 
 #pseudo {
-    font-size: 65px ;
+    font-size: 120px ;
     font-family: "UnifrakturMaguntia";
-    font-weight: 400;
+    font-weight: 500;
     font-style: italic;
-}
 
-#nav-icons {
+    
+        position: relative;
+        width: 300px; /* Adjust this for the container's width */
+        height: 50px; /* Adjust this for curve height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    /*    margin-left: 40px;*/
+        }
+    
+    #pseudo span {
+        position: absolute;
+        transform-origin: bottom center;
+        transform: rotate(0deg);
+        }
+
+
+nav {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    width: 100px;
+    height: 150px;
 }
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -65,7 +91,7 @@ main {
     padding-left: 30px;
 }
 
-span { margin: 10px;}
+span { margin: 10px; }
 /* .board-container {
     opacity: 1;
 } */
@@ -87,10 +113,21 @@ span { margin: 10px;}
 
 .light {
     background-color: white;    /* this is the deafult cell's color */
-
 }
 
 .dark {
     background-color: black;    /* this is the deafult cell's color */
-
 }
+
+
+#countdown {
+    position : "absolute";
+    /* top : "10px";
+    right : "10px";
+    background : "rgba(0, 0, 0, 0.7)";
+    color : "white";
+    padding : "10px";
+    border-radius : "5px"; */
+    font-size: 16px;
+    font-weight: bold;
+    }
