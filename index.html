@@ -15,34 +15,35 @@
 </head>
 
 <body>
-    <nav>
+    <header>
         <div><img id="logo" src="./media/icon.png"></div>
-        <div><h1 id="pseudo">ChessMania</h1></div>  
+        <div><h1 id="pseudo">Chess Mania</h1></div>  
         <div><input type="text" value="look up here..."><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
         </svg></div>
-        <div id="nav-icons">
+        <nav>
             <ul>
                 <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                    <a href="" target="_blank" title="Select your language"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
                         <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
                         <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/>
-                    </svg>
+                    </svg></a>
                 </li>
                 <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                    <a href="" target="_blank" title="Log in"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
                         <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
-                    </svg>
+                    </svg></a>
                 </li>
             </ul>
-    </nav>
+        </nav>
+    </header>
 
     <main>
         <section class="game-options">
-            <p>Choose your favorite board colors :</p>
+            <p>Choose your favorite board's model' :</p>
             <div class="radiocheck">
-                <div class="rc"><input id="deafult" type="radio" name="board-cells" value="deafult-layout">Deafult</div>
+                <div class="rc"><input id="deafult" type="radio" name="board-cells" value="classic">Classic</div>
                 <div class="rc"><input id="wood" type="radio" name="board-cells" value="wood">Wood</div>
                 <div class="rc"><input id="marble" type="radio" name="board-cells" value="marble">Marble</div>
             </div>
@@ -52,7 +53,19 @@
                 <div class="rc"><input type="radio" name="team" value="light">Light</div>
                 <div class="rc"><input type="radio" name="team" value="dark">Dark</div>
             </div>
+            <span></span>
+            <p>You play against :</p>
+            <div class="radiocheck">
+                <div class="rc"><input type="radio" name="vs-player" value="human">Human</div>
+                <div class="rc"><input type="radio" name="vs-player" value="computer">Computer</div>
+            </div>    
+            <span></span>
+            <div>
+                <button>Start game</button>
+                <button>Reset</button>
+            </div>
         </section>
+
         <section class="board-container">
             <div id="board">
                 <div class="alt-0">
